@@ -1,0 +1,36 @@
+<p> Films </p>
+
+
+
+
+<p *ngIf="!(films && films.length)">
+
+  No existe lista de Films 
+
+</p>
+
+<table class="table">
+
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>episode_id</th>
+      <th>opening_crawl</th>
+      <th>director</th>
+      <th>producer</th>
+      <th>relase_date</th>
+      <th>characteres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let films of films">
+      <td>{{films.title}}</td>
+      <td>{{films.episode_id}}</td>
+      <td>{{films.opening_crawl}}</td>
+      <td>{{films.director}}</td>
+      <td>{{films.producer}}</td>
+      <td>{{films.relase_date}}</td>
+      <td>{{films.characteres}}</td>
+    </tr>
+  </tbody>
+</table>
